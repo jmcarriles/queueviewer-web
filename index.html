@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +8,13 @@
     <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/boxicons/css/boxicons.min.css">
-    <script src="./js/jquery-3.6.1.js"></script>
+    <link rel="stylesheet" href="./css/daterangepicker.css">
     <script src="./js/main.js" defer></script>
-    <script src="./js/bootstrap/bootstrap.bundle.min.js" defer></script>
-
+    <script src="./js/jquery-3.6.1.js"></script>
+    <script src="./js/moment.min.js"></script>
+    <script src="./js/daterangepicker.js"></script>
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
 </head>
-
 <body id="body-pd">
     <header class="header" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i></div>
@@ -23,8 +23,7 @@
         <nav class="nav">
             <div>
                 <a href="#" class="nav_logo"> <i class='bx bx-home nav_logo-icon'></i> <span
-                        class="nav_logo-name">EOLOS</span> </a>
-
+                        class="nav_logo-name">EOLOS</span></a>
                 <div class="nav_list">
                     <ul class="list-unstyled components">
                         <li>
@@ -81,13 +80,9 @@
                 <span class="nav_name">Logout</span> </a>
         </nav>
     </div>
-    <!--Container Main start-->
     <div class="height-100 bg-light">
         <h4>Main Components</h4>
+        <input type="text" name="daterange" value="01/01/2015 1:30 PM - 01/01/2015 2:00 PM" />
     </div>
-    <!--Container Main end-->
-
-
-    </div>
-    </section>
+    
 </body>

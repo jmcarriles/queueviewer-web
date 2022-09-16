@@ -1,3 +1,4 @@
+//Sidebar controller
 document.addEventListener("DOMContentLoaded", function (event) {
 
     const showNavbar = (toggleId, navId, bodyId, headerId) => {
@@ -34,12 +35,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
     linkColor.forEach(l => l.addEventListener('click', colorLink))
 
-    // Your code to run since DOM is loaded and ready
+
 });
 
-$(document).ready(function () {
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-        $(this).toggleClass('active');
+// Calendar functions
+$(function () {
+    $('input[name="daterange"]').daterangepicker({
+        language: 'es',
+        opens: 'left'
+    }, function (start, end, label) {
+        console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
     });
 });
+
+let dateNow = new Date();
+console.log(dateNow);
