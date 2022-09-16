@@ -202,10 +202,9 @@ a {
 .dropdown-container{
     display: none;
     height: 100%;
+    transition: 3s ease-out;
     
 }
 
-.custom-link {
-   
-    height: 100%;
-}
+
+
