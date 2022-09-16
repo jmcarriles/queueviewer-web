@@ -39,14 +39,48 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 // Calendar functions
+
 $(function () {
     $('input[name="daterange"]').daterangepicker({
-        language: 'es',
-        opens: 'left'
+        "locale": {
+            "format": "DD/MM/YYYY",
+            "separator": " - ",
+            "applyLabel": "Aplicar",
+            "cancelLabel": "Cancelar",
+            "fromLabel": "Desde",
+            "toLabel": "Hasta",
+            "customRangeLabel": "Custom",
+            "weekLabel": "W",
+            "daysOfWeek": [
+                "Do",
+                "Lu",
+                "Ma",
+                "Mi",
+                "Ju",
+                "Vi",
+                "Sa"
+            ],
+            "monthNames": [
+                "Enero",
+                "Febrero",
+                "Marzo",
+                "Abril",
+                "Mayo",
+                "Junio",
+                "Julio",
+                "Agosto",
+                "Septiembre",
+                "Octubre",
+                "Noviembre",
+                "Deciembre"
+            ],
+            "firstDay": 1
+        },
+
+        opens: 'rigth'
     }, function (start, end, label) {
-        console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+        console.log("A new date selection was made: " + start.format('DD-MM-YYYY-00:00:00') + ' to ' + end.format('DD-MM-YYYY-23:59:59'));
     });
 });
 
-let dateNow = new Date();
-console.log(dateNow);
+
